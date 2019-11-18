@@ -1,43 +1,40 @@
 'use strict';
 
-// arguments object - no longer bound with arrow functions
+console.log('build-it-visible.js is running');
 
-var add = function add(a, b) {
-  // console.log(arguments);
-  return a + b;
-};
-console.log(add(45, 5));
+var status = 'visible';
 
-// this keyword - no longer bound
+var toggleVisible = function toggleVisible() {
+  status === 'visible' ? status = 'hidden' : status = 'visible';
 
-var user = {
-  name: 'Arya',
-  cities: ['Winterfell', 'Kings Landing', 'Braavos'],
-  printPlacesLived: function printPlacesLived() {
-    var _this = this;
-
-    return this.cities.map(function (city) {
-      return _this.name + ' has lived in ' + city;
-    });
-  }
-};
-console.log(user.printPlacesLived());
-
-// Challenge area
-
-var multiplier = {
-  // numbers array
-  numbers: [2, 3, 4],
-  // multiplyBy - single number
-  multiplyBy: 3,
-  // multiply return new array where the number hve been multiplied
-  multiply: function multiply() {
-    var _this2 = this;
-
-    return this.numbers.map(function (num) {
-      return _this2.multiplyBy * num;
-    });
-  }
+  render();
 };
 
-console.log(multiplier.multiply()); // [1,2,3] 2 [2,4,6]
+var appRoot = document.getElementById('app');
+
+var render = function render() {
+  var template = React.createElement(
+    'div',
+    null,
+    React.createElement(
+      'h4',
+      null,
+      'Toggle visible'
+    ),
+    React.createElement(
+      'button',
+      { onClick: toggleVisible },
+      'Make it ',
+      status
+    ),
+    status === 'hidden' ? React.createElement(
+      'p',
+      null,
+      'Paragraph with the text to be visible or hidden'
+    ) : null
+  );
+
+  ReactDOM.render(template, appRoot);
+};
+
+render();
