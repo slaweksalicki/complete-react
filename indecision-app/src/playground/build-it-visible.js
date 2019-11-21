@@ -1,26 +1,60 @@
 console.log('build-it-visible.js is running');
 
-let status = 'visible';
+class VisibilityToggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleToggleVisibility = this.handleToggleVisibility.bind(this);
+    this.state = {
+      visibility: false
+    };
+  }
 
-const toggleVisible = () => {
-  status === 'visible' ? status = 'hidden' : status = 'visible';
+  handleToggleVisibility() {
+    this.setState((prevState) => {
+      return {
+        visibility: !prevState.visibility
+      };
+    })
+  }
 
-  render();
+  render() {
+    return (
+      <div>
+        <h4>Toggle visible</h4>
+        <button onClick={this.handleToggleVisibility}>Click here to {this.state.visibility ? 'hide' : 'show'}</button>
+        {this.state.visibility && <p>Paragraph with the text to be visible or hidden</p>}
+      </div>
+    );
+  }
+}
 
-};
+ReactDOM.render(<VisibilityToggle />, document.getElementById('app'));
 
-const appRoot = document.getElementById('app');
 
-const render = () => {
-  const template = (
-    <div>
-      <h4>Toggle visible</h4>
-      <button onClick={toggleVisible}>Make it {status}</button>
-      {status === 'hidden' ? <p>Paragraph with the text to be visible or hidden</p> : null}
-    </div>
-  );
 
-  ReactDOM.render(template, appRoot);
-};
+// OLD:
 
-render();
+// let status = 'visible';
+
+// const toggleVisible = () => {
+//   status === 'visible' ? status = 'hidden' : status = 'visible';
+
+//   render();
+
+// };
+
+// const appRoot = document.getElementById('app');
+
+// const render = () => {
+//   const template = (
+//     <div>
+//       <h4>Toggle visible</h4>
+//       <button onClick={toggleVisible}>Make it {status}</button>
+//       {status === 'hidden' ? <p>Paragraph with the text to be visible or hidden</p> : null}
+//     </div>
+//   );
+
+//   ReactDOM.render(template, appRoot);
+// };
+
+// render();
