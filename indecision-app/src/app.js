@@ -1,18 +1,31 @@
-// import './utils.js';
-// import subtract, { square, add } from './utils.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import IndecisionApp from './components/IndecisionApp';
 
-// console.log('app.js is running!!!  1122')
-// console.log(square(4));
-// console.log(add(4, 6));
-// console.log(subtract(14, 6));
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
 
+class OldSyntax {
+  constructor() {
+    this.name = 'Robb';
+    this.getGreeting = this.getGreeting.bind(this);
+  }
+  getGreeting() {
+    return `Hi. My name is ${this.name}.`;
+  }
+}
+const oldSyntax = new OldSyntax();
+const getGreeting = oldSyntax.getGreeting;
+console.log(getGreeting());
 
-import isSenior, { isAdult, canDrink } from './person.js';
+// --------
 
-console.log(isAdult(19));
-console.log(canDrink(19));
-console.log(isSenior(69));
+class NewSyntax {
+  name = 'Jon';
+  getGreeting = () => {
+    return `Hi. My name is ${this.name}.`;
+  }
+}
 
-// Setting the default export and function
-// Grab the default and call it
-
+const newSyntax = new NewSyntax();
+const newGetGreeting = newSyntax.getGreeting;
+console.log(newGetGreeting());
