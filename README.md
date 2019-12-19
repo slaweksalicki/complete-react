@@ -22,3 +22,6 @@ yarn run dev-server
 
 yarn add babel-plugin-transform-class-properties@6.24.1
 
+yarn add react-modal@2.2.2
+
+
