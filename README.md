@@ -30,4 +30,8 @@ yarn add style-loader@0.18.2 css-loader@0.28.4
 
 yarn add sass-loader@6.0.6 node-sass@4.5.3
 
+yarn add normalize.css@7.0.0
+
+
+
 
