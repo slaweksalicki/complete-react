@@ -36,6 +36,9 @@ yarn add normalize.css@7.0.0
 
 Expensify-app
 
+yarn add react-router-dom@4.2.2
+
+yarn run dev-server
 
 
 
