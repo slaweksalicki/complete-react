@@ -40,5 +40,7 @@ yarn add react-router-dom@4.2.2
 
 yarn run dev-server
 
+yarn add uuid@3.1.0
+
 
 
