@@ -67,7 +67,7 @@ const setEndDate = (endDate) => ({
 
 const filtersReducerDefaultState = {
   text: '',
-  sortBy: 'aaa',
+  sortBy: 'date',
   startDate: undefined,
   endDate: undefined
 };
