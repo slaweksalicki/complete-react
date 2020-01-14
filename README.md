@@ -50,3 +50,15 @@ yarn add moment@2.18.1 react-dates@12.7.0 react-addons-shallow-compare@15.6.0
 
 
 add Redux DevTools browser addons
+
+================
+
+testing Your App
+
+yarn add jest@20.0.4
+
+yarn run test
+
+yarn test -- --watch
+
+
