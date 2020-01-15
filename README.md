@@ -61,4 +61,6 @@ yarn run test
 
 yarn test -- --watch
 
+yarn add react-test-renderer@16.0.0
+
 
