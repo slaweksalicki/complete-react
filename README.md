@@ -73,6 +73,10 @@ yarn run build:prod
 
 yarn add extract-text-webpack-plugin@3.0.0
 
+yarn add express@4.15.4
+
+node server/server.js
+
 
 
 
