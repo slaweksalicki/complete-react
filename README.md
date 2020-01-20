@@ -87,5 +87,9 @@ git push heroku master
 
 yarn add chalk --dev
 
+yarn add numeral@2.0.6
+
+
+
 
 
