@@ -82,7 +82,10 @@ https://devcenter.heroku.com/articles/heroku-cli
 
 heroku create react-expensify-app-ss
 
+git push heroku master
 
+
+yarn add chalk --dev
 
 
 
