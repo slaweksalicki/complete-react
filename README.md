@@ -78,6 +78,10 @@ yarn add express@4.15.4
 node server/server.js
 
 
+https://devcenter.heroku.com/articles/heroku-cli
+
+heroku create react-expensify-app-ss
+
 
 
 
