@@ -90,6 +90,10 @@ yarn add chalk --dev
 yarn add numeral@2.0.6
 
 
+===================
 
+https://console.firebase.google.com
+
+yarn add firebase@4.2.0
 
 
