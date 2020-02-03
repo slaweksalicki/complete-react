@@ -18,20 +18,48 @@ database.ref().set(
   {
     name: 'Jon Snow',
     age: 15,
-    isSingle: false,
+    stressLevel: 6,
+    job: {
+      title: 'Bastard',
+      company: 'Starks'
+    },
     location: {
       city: 'Winterfell',
       country: 'North'
     }
   }
-);
+).then(() => {
+  console.log('Data is saved');
+}).catch((error) => {
+  console.log('This failed.', error);
+});
+
+database.ref().update({
+  stressLevel: 9,
+  'job/company': 'Night Watch',
+  'location/city': 'The Wall'
+});
+
+//database.ref('isSingle').set(null);
 
 // database.ref().set('This is my data.');
 
-database.ref('age').set(17);
-database.ref('location/city').set('The Wall');
+// database.ref('age').set(17);
+// database.ref('location/city').set('The Wall');
 
-database.ref('attributes').set({
-  height: 175,
-  weight: 80
-});
+// database.ref('attributes').set({
+//   height: 175,
+//   weight: 80
+// }).then(() => {
+//   console.log('Data is saved 2');
+// }).catch((error) => {
+//   console.log('This failed 2.', error);
+// });
+
+// database.ref('isSingle')
+//   .remove()
+//   .then(() => {
+//     console.log('Data was removed');
+//   }).catch((error) => {
+//     console.log('Did not remove data', error);
+//   });
