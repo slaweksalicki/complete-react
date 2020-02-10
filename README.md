@@ -97,3 +97,18 @@ https://console.firebase.google.com
 yarn add firebase@4.2.0
 
 
+yarn add redux-thunk@2.2.0
+
+yarn add redux-mock-store@1.2.3
+
+yarn add --dev cross-env@5.0.5
+
+yarn add --dev dotenv@4.0.0
+
+=====================
+
+heroku config: set
+
+
+
+
